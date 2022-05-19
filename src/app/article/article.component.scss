@@ -1,0 +1,52 @@
+.article-page {
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 250px;
+    }
+
+    mat-card {
+        margin: 0 auto;
+        width: 80%;
+        position: relative;
+        top: -75px;
+        min-height: 500px;
+    }
+
+    mat-card-title {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin: 10px auto;
+        letter-spacing: .1px;
+    }
+
+    mat-card-content {
+        font-size: 16px;
+        margin: 30px;
+        font-weight: 300;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+        margin: 0 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        font-size: 16px;
+        font-weight: 700;
+        transition: color .2s ease-in-out, letter-spacing .2s ease-in-out;
+
+        mat-icon {
+            margin-right: 5px;
+        }
+    }
+
+    a:hover {
+        color: #666;
+        letter-spacing: .5px;
+    }
+
+}

@@ -1,0 +1,19 @@
+<mat-card>
+    <img mat-card-image src={{articleInfo.imageUrl}} alt="Photo of a Shiba Inu">
+    <mat-card-subtitle>
+        <mat-icon>calendar_today</mat-icon>
+        {{articleInfo?.updatedAt | date}}
+    </mat-card-subtitle>
+    <mat-card-title
+     appHighlight [filterWords]="filterKeywords" [content]="articleInfo.title">{{articleInfo?.title}}
+    </mat-card-title>
+    <mat-card-content>
+        <p appHighlight [filterWords]="filterKeywords" [content]="articleInfo.summary.slice(0, 100).concat('...')">
+            {{articleInfo?.summary | slice:0:100}}...</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-button [routerLink]="['/article', articleInfo.id]">Read more <mat-icon>east</mat-icon></a>
+
+    </mat-card-actions>
+</mat-card>
+

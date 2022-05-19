@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-icon>search</mat-icon>
+  <input type="text" [(ngModel)]="keywords" (input)="addNewKeyword()" placeholder="Filter by keywords">
+</mat-card>
+<p>Results: </p>
+<mat-divider ></mat-divider>
+<mat-grid-list cols="3" rowHeight="500px" gutterSize="25px">
+  <mat-grid-tile 
+  *ngFor="let article of allArticles$ | async"
+      [colspan]="1"
+      [rowspan]="1"
+      >
+        <app-card-article 
+        [filterKeywords]="keywords"
+          [articleInfo]="article"
+        ></app-card-article>
+
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
